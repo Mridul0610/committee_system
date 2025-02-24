@@ -1,0 +1,1254 @@
+{
+	"info": {
+		"_postman_id": "62ba3e07-c7a8-477f-ad8b-57f06b57cb91",
+		"name": "Committe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17229256"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/login",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Committe Type",
+					"item": [
+						{
+							"name": "Add Committe Type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "type 1",
+											"type": "text"
+										},
+										{
+											"key": "thumbnail",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/Photoshop/34313.png"
+										},
+										{
+											"key": "description",
+											"value": "qwerty",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeType/add",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeType",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Committe Type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "type i",
+											"type": "text"
+										},
+										{
+											"key": "thumbnail",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/Photoshop/4873152.jpg"
+										},
+										{
+											"key": "description",
+											"value": "qwertyy",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeType/update",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeType",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Committe Type Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeType/status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeType",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single Committe Type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeType/single",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeType",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Committe Types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeType/all",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeType",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Committe Detail",
+					"item": [
+						{
+							"name": "Add Committe detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Detail 1",
+											"type": "text"
+										},
+										{
+											"key": "committeTypeId",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										},
+										{
+											"key": "members",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "month",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "totalAmount",
+											"value": "2000",
+											"type": "text"
+										},
+										{
+											"key": "perMemberAmount",
+											"value": "222",
+											"type": "text"
+										},
+										{
+											"key": "startMonth",
+											"value": "dd",
+											"type": "text"
+										},
+										{
+											"key": "endMonth",
+											"value": "as",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "ssd",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeDetail/add",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeDetail",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Committe Detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6628da5ca61c8c66de466f98",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "d 1",
+											"type": "text"
+										},
+										{
+											"key": "committeTypeId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "members",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "month",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "totalAmount",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "perMemberAmount",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "startMonth",
+											"value": "june",
+											"type": "text"
+										},
+										{
+											"key": "endMonth",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeDetail/update",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeDetail",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Committe Detail Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeType/status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeType",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single Committe Detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6628b7fbdfb27355a9dbde0b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeDetail/single",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeDetail",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Committe Details",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/committeDetail/all",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"committeDetail",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Requests",
+					"item": [
+						{
+							"name": "Request Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "662b568cf4f4f7b6b2c9a0d6",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/request/status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"request",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Requests",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/request/all",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"request",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Chat",
+					"item": [
+						{
+							"name": "Chat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "adminId",
+											"value": "6628b37c6b6456e2ac8efbf3",
+											"type": "text"
+										},
+										{
+											"key": "customerId",
+											"value": "6628de7512170f475e518ec3",
+											"type": "text"
+										},
+										{
+											"key": "fromId",
+											"value": "6628b37c6b6456e2ac8efbf3",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "hii",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/chat/add",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"chat",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Chat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "6628b37c6b6456e2ac8efbf3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/chat/all",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"chat",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single chat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "fromId",
+											"value": "661765fbbfccae352bfba83d",
+											"type": "text"
+										},
+										{
+											"key": "toId",
+											"value": "661a2c1fbfb19d9e36cd61b3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/chat/single",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"chat",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete message",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "661cb0016b67bba114165717",
+											"type": "text"
+										},
+										{
+											"key": "index",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/admin/chat/delete",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"admin",
+										"chat",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/login",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change Password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "661e0f657b0f516a150339d9",
+											"description": "user's  _id",
+											"type": "text"
+										},
+										{
+											"key": "currentPassword",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "newPassword",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "confirmPassword",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/changePassword",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "customer 1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "customer@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "jalandhar",
+											"type": "text"
+										},
+										{
+											"key": "profile",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/Photoshop/20230701133434_[fpdl.in]_man-holding-laptop_13339-84716_large.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/register",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "661e1a4cda09f0112b791ea6",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mohit@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "mohit",
+											"type": "text"
+										},
+										{
+											"key": "profile",
+											"type": "file",
+											"src": "/C:/Users/hp/Downloads/Photoshop/20230701133434_[fpdl.in]_man-holding-laptop_13339-84716_large.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/update",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/profile",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Request",
+					"item": [
+						{
+							"name": "Add Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "committeDetailId",
+											"value": "662b4f53eb315e9788f3cb60",
+											"type": "text"
+										},
+										{
+											"key": "customerId",
+											"value": "6628de7512170f475e518ec3",
+											"type": "text"
+										},
+										{
+											"key": "enrollmentDate",
+											"value": "2024-04-28T06:53:07.491+00:00",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/request/add",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"request",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Requests",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "committeDetailId",
+											"value": "6628da5ca61c8c66de466f98",
+											"type": "text"
+										},
+										{
+											"key": "customerId",
+											"value": "6628de7512170f475e518ec3",
+											"type": "text"
+										},
+										{
+											"key": "enrollmentDate",
+											"value": "2024-04-24T10:27:01.886+00:00",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/request/add",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"request",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Chat",
+					"item": [
+						{
+							"name": "Chat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "adminId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "customerId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "fromId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/chat/add",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"chat",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Chat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "661a2c1fbfb19d9e36cd61b3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/chat/all",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"chat",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single chat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "fromId",
+											"value": "661765fbbfccae352bfba83d",
+											"type": "text"
+										},
+										{
+											"key": "toId",
+											"value": "661a2c1fbfb19d9e36cd61b3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/chat/single",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"chat",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete message",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "661cb0016b67bba114165717",
+											"type": "text"
+										},
+										{
+											"key": "index",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/customer/chat/delete",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"customer",
+										"chat",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
